@@ -2,12 +2,12 @@
 
 from math import sin, radians
 
-colors = ximport('colors')
+colormode(HSB)
 
 def _draw_background(frame):
     s = sin(radians(frame))
     hue = abs(s) * .5
-    _color = colors.hsb(hue, .5, .2)
+    _color = color(hue, .5, .2)
     background(_color)
 
 def _draw_cross(frame):
@@ -17,7 +17,7 @@ def _draw_cross(frame):
     hue = abs(s) * .5
     v = s * (HEIGHT / 2)
     y += v
-    _color = colors.hsb(hue, 1, .8, .5)
+    _color = color(hue, 1, .8, .5)
     stroke(_color)
     strokewidth(1)
     line(x, 0, x, HEIGHT, draw=True)
@@ -31,7 +31,7 @@ def _draw_circle(frame):
     v = s * (HEIGHT / 2)
     y += v
     nostroke()
-    _color = colors.hsb(hue, 1, .7, .7)
+    _color = color(hue, 1, .7, .7)
     fill(_color)
     w = (WIDTH/2) - v
     h = (WIDTH/2) - v
@@ -43,7 +43,7 @@ def _draw_rotate(frame):
     hue = abs(s) * .5
     v = s * (HEIGHT / 2)
     nostroke()
-    _color = colors.hsb(hue, 1, 1)
+    _color = color(hue, 1, 1)
     _size = 10
     fill(_color)
     _y = abs(v * 2) - (_size/2)
@@ -61,7 +61,7 @@ def _draw_wave(frame):
     hue = abs(s) * .5
     _size = 2 + (6 * hue)
     y = (HEIGHT/2) - ( s * (HEIGHT / 4) ) - (_size/2)
-    _color = colors.hsb(hue, 0, 1, .35)
+    _color = color(hue, 0, 1, .35)
     # draw
     nostroke()
     fill(_color)

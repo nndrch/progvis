@@ -1,4 +1,4 @@
-# triangles
+# triangulo
 
 x, y = 20, 20
 w = h = 40

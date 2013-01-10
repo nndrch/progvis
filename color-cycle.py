@@ -1,29 +1,29 @@
-# simple color cycle
+# ciclo de cores 
 
-x, y = 0, 0
-w = h = 8
-c = 9
-s = 64
+colormode(HSB)
 
-# make colors
+x, y = 0, 0     # posição de origem
+w = h = 12      # largura = altura (em módulos)
+c = 13          # quantidade de cores
+s = 40          # tamanho do módulo
+
+# criar cores
 
 _colors = []
 for i in range(c):
-    _color = color(random(), random(), random())
+    _color = color(random(), 1, 1)
     _colors.append(_color)
-
-# draw
 
 size(w*s, h*s)
 
 _x, _y = x, y
 
 _count = 0
-for i in range(len(_colors)):
-    for j in range(len(_colors)):
-        _index = _count % w
-        c = _colors[_index]
-        fill(c)
+for i in range(w):
+    for j in range(h):
+        _index = _count % c
+        _color = _colors[_index]
+        fill(_color)
         rect(_x, _y, s, s)
         _x += s
         _count += 1

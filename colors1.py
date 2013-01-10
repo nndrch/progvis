@@ -1,12 +1,7 @@
-# [h] color panels
+# amostras de cor
 
-colors = ximport('colors')
-
+colormode(CMYK)
 size(520, 352)
-
-#----------
-# settings
-#----------
 
 d1 = 4
 d2 = 4
@@ -30,25 +25,24 @@ c1_invert = False
 c2_invert = False
 c3_invert = True
 
-#-------
-# draw!
-#-------
-
 for i in range(d1):
     for j in range(d2):
         _x = x + (i * (dist + cell_width))
         _y = y + (j * (dist + cell_height))
         c1 = i * c1_step
         c2 = j * c2_step
-        if c1_invert: c1 = 1.00 - c1
-        if c1_invert: c2 = 1.00 - c2
+        if c1_invert:
+            c1 = 1.00 - c1
+        if c1_invert:
+            c2 = 1.00 - c2
         for k in range(d3):
             c3 = (k) * c3_step
-            if c3_invert: c3 = 1.00 - c3
+            if c3_invert:
+                c3 = 1.00 - c3
             _w = cell_width / d3
             _h = cell_height / d3
             _cell_width = cell_width - (k * _w)
             _cell_height = cell_height - (k * _h)
-            _color = colors.cmyk(c1, c3, c2, 0)
+            _color = color(c1, c3, c2, 0)
             fill(_color)
             rect(_x, _y, cell_width, _cell_height)

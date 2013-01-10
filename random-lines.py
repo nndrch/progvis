@@ -1,9 +1,10 @@
-# line connecting random points
+# linhas conectando pontos aleatorios
 
 size(400, 400)
+autoclosepath(False)
 
-_margin = 76
-_points = 49
+_margin = 40
+_points = 20
 
 beginpath()
 
@@ -19,6 +20,6 @@ p = endpath(draw=False)
 
 nofill()
 stroke(random(), random(), random())
-strokewidth(2)
+strokewidth(random(2, 10))
 
 drawpath(p)

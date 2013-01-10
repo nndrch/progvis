@@ -1,4 +1,4 @@
-# module
+# modulo 1
 
 s = 57
 w = 15

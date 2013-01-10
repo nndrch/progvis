@@ -1,4 +1,4 @@
-# triangles
+# triangulo : modulo
 
 def draw_module(x, y, w, h):
     fill(0)

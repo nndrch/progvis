@@ -1,4 +1,4 @@
-# [h] compound paths
+# exemplo de formas compostas
 
 # http://nodebox.net/code/index.php/Compound_paths
 
@@ -6,7 +6,7 @@ size(600, 400)
 nofill()
 strokewidth(3)
 
-# union
+# união
 
 x, y = 40, 20
 
@@ -19,7 +19,7 @@ fill(.8, .5)
 stroke(0)
 drawpath(compound)
 
-# intersect
+# interseção
 
 x, y = 280, 20
 
@@ -32,7 +32,7 @@ stroke(0)
 fill(.8, .5)
 drawpath(compound)
 
-# difference
+# diferença
 
 x, y = 40, 200
 
